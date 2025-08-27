@@ -1,0 +1,41 @@
+How to Run Selenium PHP Login Automation
+
+1. Install Requirements
+   -> Make sure you have [XAMPP](https://www.apachefriends.org/) installed and running (Apache and ChromeDriver).
+   -> Install [Composer](https://getcomposer.org/) if not already installed.
+
+2. Install PHP WebDriver
+   -> Open a terminal in the project folder.
+   -> Run:
+     composer require php-webdriver/webdriver
+
+3. Download ChromeDriver
+   -> Download the ChromeDriver version matching your Chrome browser from: https://sites.google.com/chromium.org/driver/
+   -> Extract and place `chromedriver.exe` in a known location (e.g., `C:\chromedriver\chromedriver.exe`).
+
+4. Start ChromeDriver
+   -> Open a new terminal window.
+   -> Run:
+     cd chromedriver-win64
+     ./chromedriver.exe --port=9515
+
+5. Start Apache Server
+   -> Open XAMPP Control Panel.
+   -> Start the Apache module.
+
+6. Access the Application
+   -> Place the project folder (`Selenium_With_PHP`) in `C:\xampp\htdocs\`.
+   -> Open your browser and go to: http://localhost/selenium_with_php/
+
+7. Run the Selenium Test
+   -> In the terminal, navigate to the `test` folder:
+        cd test
+   -> Run the test script:
+        php testLogin.php
+
+8. View Results
+   -> The terminal will display the result of each test case (Passed/Failed).
+
+**Notes:**
+- Make sure ChromeDriver and your Chrome browser versions are compatible.
+- If you change the login credentials in `index.php`, update your test cases
